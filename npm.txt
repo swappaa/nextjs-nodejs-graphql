@@ -1,0 +1,33 @@
+npm install @apollo/server @graphql-tools/schema graphql-subscriptions graphql-tag graphql-ws
+npm install nodemon ts-node
+npm install --save-dev @types/ws @types/cors
+npm install ws --save
+npm install express mysql
+
+
+NextJS
+npm install @apollo/client @apollo/react-hooks apollo-cache-inmemory
+npm install @apollo/react-hooks
+
+
+
+
+mutation Mutation($branchId: ID, $activityTypeId: ID, $referenceId: ID, $activityDesc: String, $dateAdded: String, $addedBy: String) {
+  createActivity(branch_id: $branchId, activity_type_id: $activityTypeId, reference_id: $referenceId, activity_desc: $activityDesc, date_added: $dateAdded, added_by: $addedBy) {
+    branch_id
+    activity_id
+    activity_type_id
+    reference_id
+    activity_desc
+    added_by
+    date_added
+  }
+}
+
+{
+  "branchId": 0,
+  "activityTypeId": 1,
+  "referenceId": 1,
+  "activityDesc": "This is a test",
+  "dateAdded": "2022-09-22 20:41:26"
+}
